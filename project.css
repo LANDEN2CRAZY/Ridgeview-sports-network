@@ -1,0 +1,129 @@
+
+/* Ridgeview school colors */
+:root {
+    --purple: #4c2e82;
+    --gold: #b6a47a;
+    --dark: #10091b;
+    --white: #ffffff;
+}
+
+/* Main page */
+body {
+    margin: 0;
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+/* Header layout */
+.header {
+    background-color: var(--purple);
+    border-bottom: 4px solid var(--gold);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.navbar a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: var(--gold);
+    color: var(--dark);
+}
+
+/* Hero banner */
+.hero {
+    min-height: 350px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 9, 27, 0.95),
+            rgba(76, 46, 130, 0.4)
+        ),
+        url("https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h2 span {
+    color: var(--gold);
+}
+
+/* Three-column content layout */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 25px;
+}
+
+/* Panels */
+.panel {
+    background-color: #1b1525;
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.panel-title {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 15px;
+    margin: 0;
+}
+
+/* Sports card layout */
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 15px;
+}
+
+.sport-card {
+    background-color: var(--dark);
+    color: var(--white);
+    border: 2px solid var(--gold);
+    padding: 15px 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sport-card:hover {
+    background-color: var(--purple);
+}
+
+/* Small screens */
+@media (max-width: 800px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+}
